@@ -1,3 +1,7 @@
+/////////////////////////
+part 2- Add Admin sub menu
+/////////////////////////
+
 Wordpress Pro Theme Development
 Goto Wordpress.org Website And download wordpress
 Extract in local host(wamp, mamp, lamp, xamp)
@@ -21,3 +25,7 @@ My theme structure is:
         screenshot.php
 
 NOTE: screenshot.png size is 1200*900px
+
+/////////////////////////
+part 2- Add Admin sub menu
+/////////////////////////
