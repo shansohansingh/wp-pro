@@ -26,6 +26,19 @@ My theme structure is:
 
 NOTE: screenshot.png size is 1200*900px
 
+
 /////////////////////////
 part 2- Add Admin sub menu
 /////////////////////////
+
+
+/////////////////////////
+part 3- Add form field
+/////////////////////////
+add submenu
+
+
+/////////////////////////
+part 4- Add social media handler
+/////////////////////////
+social media handler
