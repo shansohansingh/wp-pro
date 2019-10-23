@@ -24,6 +24,7 @@ add_action( 'admin_menu', 'sunset_add_admin_page');
 function sunset_custom_settings() {
     register_setting( 'sunset-setting-group', 'first_name' );
     register_setting( 'sunset-setting-group', 'last_name' );
+    register_setting( 'sunset-setting-group', 'user_description' );
     register_setting( 'sunset-setting-group', 'twitter_handler', 'sunset_sanitize_twitter_handler' );
     register_setting( 'sunset-setting-group', 'facebook_handler' );
     register_setting( 'sunset-setting-group', 'instagram_handler' );
@@ -31,6 +32,7 @@ function sunset_custom_settings() {
     add_settings_section( 'sunset-sidebar-options', 'Sidebar Option', 'sunset_sidebar_options', 'alecaddd_sunset' );
 
     add_settings_field( 'sidebar-name', 'Full Name', 'sunset_sidebar_name', 'alecaddd_sunset', 'sunset-sidebar-options' );
+    add_settings_field( 'sidebar-description', 'Description', 'sunset_sidebar_description', 'alecaddd_sunset', 'sunset-sidebar-options' );
 
     add_settings_field( 'sidebar-twitter', 'Twitter Handler', 'sunset_sidebar_twitter', 'alecaddd_sunset', 'sunset-sidebar-options' );
     add_settings_field( 'sidebar-facebook', 'Facebook Handler', 'sunset_sidebar_facebook', 'alecaddd_sunset', 'sunset-sidebar-options' );
@@ -38,7 +40,7 @@ function sunset_custom_settings() {
 }
 
 function sunset_sidebar_options() {
-    echo "customize properties";
+    //echo "customize properties";
 }
 
 function sunset_sidebar_name() {
@@ -47,6 +49,11 @@ function sunset_sidebar_name() {
     echo '<input type="text" name="first_name" value="'.$firstName.'" placeholder="First Name" /> <input type="text" name="last_name" value="'.$lastName.'" placeholder="Last Name" />';
 }
 
+function sunset_sidebar_description() {
+    $description = esc_attr( get_option( 'user_description' ) );
+    
+    echo '<input type="text" name="user_description" value="'.$description.'" placeholder="Description" /> <p class="description">Your short description </p>';
+}
 function sunset_sidebar_twitter() {
     $twitter = esc_attr( get_option( 'twitter_handler' ) );
     
@@ -75,7 +82,7 @@ function sunset_theme_create_page() {
 
 function sunset_theme_setting_page() {
     // generation  of our admin page
-    echo "<h1>Welcome custom css</h1>";
+    //echo "<h1>Welcome custom css</h1>";
 }
 
 ?>
