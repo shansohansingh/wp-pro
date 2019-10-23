@@ -1,4 +1,4 @@
-<h1>Sunset Theme Setting</h1>
+<h1>Sunset Sidebar Theme Setting</h1>
 <?php settings_errors(); ?>
 <?php 
 	
