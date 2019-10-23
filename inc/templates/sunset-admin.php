@@ -1,4 +1,4 @@
-<h1>Sunset Sidebar Theme Setting</h1>
+<h1>Sunset Sidebar Options</h1>
 <?php settings_errors(); ?>
 <?php 
 	
@@ -22,8 +22,8 @@
 	</div>
 </div>
 
-<form method="post" action="options.php" class="sunset-general-form">
+<form id="submitForm" method="post" action="options.php" class="sunset-general-form">
 	<?php settings_fields( 'sunset-settings-group' ); ?>
 	<?php do_settings_sections( 'alecaddd_sunset' ); ?>
-	<?php submit_button(); ?>
+	<?php submit_button( 'Save Changes', 'primary', 'btnSubmit' ); ?>
 </form>
